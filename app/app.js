@@ -5,9 +5,12 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
   modulePrefix: 'germany-photos-ember', // TODO: loaded via config
-  Resolver: Resolver
+  Resolver: Resolver,
+  ApplicationAdapter: DS.FixtureAdapter.extend()
 });
+window.App = App;
 
 loadInitializers(App, 'germany-photos-ember');
+// App.ApplicationAdapter = ;
 
 export default App;
